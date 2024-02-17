@@ -40,11 +40,23 @@
 <section class="topic">
 <h2 class="topic">1: On Beyond Engineering</h2>
 <ul>
-<li>Your responsibility as a manager is no longer to do things</li>
-<li>It&rsquo;s to make sure everyone else can do things</li>
-<li>The transition is often gradual in academia, open source, and startups</li>
-<li>This tutorial will help</li>
+<li>Research software is software created and run to answer specific questions</li>
+<li>Usual starting point:<ul>
+<li>The software is just a piece of laboratory equipment</li>
+<li>Papers, theses, and other reports are the product</li>
+</ul>
+</li>
+<li>But if the software becomes more popular,
+    focus becomes building and sharing software that others can use</li>
+<li>Your responsibility as a manager is no longer to do things:
+    it&rsquo;s to make sure everyone else can do things<ul>
+<li>The transition is often gradual</li>
+</ul>
+</li>
+<li>This tutorial will help<ul>
 <li>But only if you do the exercises</li>
+</ul>
+</li>
 </ul>
 <!-- ---------------------------------------------------------------- -->
 <section class="aside">
@@ -52,17 +64,17 @@
 <ul>
 <li>Notes and working examples that instructors can use to perform a lesson<ul>
 <li>Do <em>not</em> expect novices with no prior Python or Unix experience to be able to learn from them</li>
-</ul>
-</li>
 <li>Musical analogy<ul>
 <li>This is the chord changes and melody</li>
 <li>We expect instructors to create an arrangement and/or improvise while delivering</li>
-<li>See <a href="https://teachtogether.tech/"><em>Teaching Tech Together</em></a> for background</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Please see <a href="./license/">the license</a> for terms of use,
     the <a href="./conduct/">Code of Conduct</a> for community standards,
     and <a href="./contributing/">these guidelines</a> for notes on contributing</li>
+<li>Will cover some technical material, but focus is on teamwork not programming</li>
 <li>About the author:
     <a href="https://third-bit.com/">Greg Wilson</a> is a programmer, author, and educator<ul>
 <li>Co-founder and first Executive Director of <a href="https://carpentries.org/">Software Carpentry</a></li>
@@ -78,20 +90,20 @@
 <li><a href="http://teachtogether.tech/en/index.html#s:process-personas">Intended audience</a><ul>
 <li>Ning did a bachelor&rsquo;s degree in economics
     and now works as a data analyst for the Ministry of Health</li>
-<li>They learned Python in an intensive 16-week data science bootcamp program
+<li>They learned Python in an intensive 16-week data science bootcamp
     and are comfortable working with Unix command-line tools
-    and writing data analysis programs with Python</li>
-<li>Ning has been put in charge of a new team
-    responsible for building analytics dashboards
-    that people in the Ministry can use to query data in real time</li>
+    and writing multi-page data analyses</li>
+<li>Ning is now in charge of a team
+    responsible for building real-time analytics dashboards
+    for non-programming staff in the Ministry</li>
 <li>They have no prior experience managing a team,
-    but have some horror stories from grad school and internships about being badly managed</li>
+    but had some bad experiences being mismanaged in grad school and internships</li>
 </ul>
 </li>
 <li>Prerequisites<ul>
-<li>intermediate Unix command line: <code>find</code>, <code>grep</code>, shell scripts using <code>for</code></li>
-<li>data analysis with Python: Pandas, Plotly, Jupyter notebooks, argparse, regular expressions</li>
-<li>using Git and GitHub on months-long projects with two or three colleagues</li>
+<li>Intermediate Unix command line: <code>find</code>, <code>grep</code>, shell scripts using <code>for</code></li>
+<li>Data analysis with Python: Pandas, Plotly, Jupyter notebooks, argparse, regular expressions</li>
+<li>Using Git and GitHub on months-long projects with two or three colleagues</li>
 </ul>
 </li>
 <li>Learning outcomes<ol>
@@ -102,7 +114,39 @@
 <!-- ---------------------------------------------------------------- -->
 </section>
 <section class="topic">
-<h2 class="topic">2: Roles</h2>
+<h2 class="topic">2: Starting Point</h2>
+<ul>
+<li>Most analyses done in [Jupyter notebooks][jupyter]<ul>
+<li>Everyone has a <a href="#g:sandbox">sandbox</a> Git repository</li>
+<li>Analyses and reports (sort of) organized by client and date</li>
+</ul>
+</li>
+<li>Some utility code in a shared Git repo<ul>
+<li>Everyone clones it to their desktop and installs in editable mode</li>
+</ul>
+</li>
+<li>Google Docs for reports to <a href="#g:stakeholder">stakeholders</a><ul>
+<li>Copy/paste figures from notebooks into docs</li>
+<li>(Much) easier than the alternatives when collaborating with non-programmers</li>
+</ul>
+</li>
+<li>Datasets stored in Google Drive<ul>
+<li>Everyone downloads what they to the <code>./data</code> directory in their sandbox repos</li>
+<li>Rely on <code>.gitignore</code> to keep this out of version control</li>
+</ul>
+</li>
+<li>Ning has to figure out:<ul>
+<li>What &ldquo;better&rdquo; looks like technically <span class="bib-ref">[<a class="bib-ref" href="bib/#Wilson2014">Wilson2014</a>, <a class="bib-ref" href="bib/#Wilson2017">Wilson2017</a>, <a class="bib-ref" href="bib/#Irving2021">Irving2021</a>]</span></li>
+<li>What it looks like <em>organizationally</em></li>
+<li>How to get the team to buy into changes (vs. doing it because they&rsquo;re told to)</li>
+<li>How to get the organization to support those changes with more than just words</li>
+</ul>
+</li>
+</ul>
+<!-- ---------------------------------------------------------------- -->
+</section>
+<section class="topic">
+<h2 class="topic">3: Roles</h2>
 <ul>
 <li>Newcomer&rsquo;s view</li>
 </ul>
@@ -194,16 +238,14 @@
 <section class="aside">
 <h2 class="aside">In Academia</h2>
 <ul>
-<li>In academia:<ul>
+<li>In academia <span class="bib-ref">[<a class="bib-ref" href="bib/#Kuchner2011">Kuchner2011</a>]</span>:<ul>
 <li>Marketing is publishing papers and giving talks</li>
 <li>Sales is getting research grants</li>
-<li>See <span class="bib-ref">[<a class="bib-ref" href="bib/#Kuchner2011">Kuchner2011</a>]</span></li>
 </ul>
 </li>
-<li>In open source:<ul>
-<li>Marketing is blogging, podcasting, and giving talks</li>
+<li>In open source <span class="bib-ref">[<a class="bib-ref" href="bib/#Eghbal2020">Eghbal2020</a>]</span>:<ul>
+<li>Marketing is blogging, podcasting, and talking at meetups</li>
 <li>Sales is an unsolved problem</li>
-<li>See <span class="bib-ref">[<a class="bib-ref" href="bib/#Eghbal2020">Eghbal2020</a>]</span></li>
 </ul>
 </li>
 </ul>
@@ -229,7 +271,7 @@ Label these activities by role.</p>
 <!-- ---------------------------------------------------------------- -->
 </section>
 <section class="topic">
-<h2 class="topic">3: Meetings</h2>
+<h2 class="topic">4: Meetings</h2>
 <ul>
 <li>People don&rsquo;t hate meetings: they hate badly-run meetings<ul>
 <li>Which are the only kind most people have seen</li>
@@ -310,16 +352,18 @@ What you will probably see is:</p>
 <!-- ---------------------------------------------------------------- -->
 </section>
 <section class="topic">
-<h2 class="topic">4: Direction</h2>
+<h2 class="topic">5: Direction</h2>
 <ul>
-<li>Write an <a href="#g:elevator_pitch">elevator pitch</a><ul>
+<li>Write an <a href="#g:elevator_pitch">elevator pitch</a> to help yourself figure out:<ul>
 <li>Who you&rsquo;re trying to help</li>
 <li>What problem they have</li>
 <li>What you&rsquo;re doing</li>
 <li>Why it&rsquo;s better</li>
 </ul>
 </li>
-<li>Example:<ul>
+</ul>
+<blockquote>
+<ul>
 <li>Sooner or later, every social scientist has to analyze census data.</li>
 <li>A lot of them use CenPlot,
     but its GUI looks old-fashioned
@@ -332,7 +376,8 @@ What you will probably see is:</p>
     It will also offer a comprehensive Python API
     so that people can integrate it into data analysis pipelines.</li>
 </ul>
-</li>
+</blockquote>
+<ul>
 <li><em>Don&rsquo;t</em> make the same unverifiable claims that you mock in others&rsquo; pitches<ul>
 <li>E.g., &ldquo;a flexible, intuitive interface&rdquo;:
     have you ever seen anyone describe their system as inflexible and confusing?</li>
@@ -376,7 +421,11 @@ Where do people disagree on who they&rsquo;re trying to help and how?</p>
 <h3>Acknowledgments</h3>
 <p>This tutorial would not exist without the help of:</p>
 <ul><li>Kate Hertweck</li>
+<li>Damien Irving</li>
+<li>Luke Johnston</li>
+<li>Joel Ostblom</li>
 <li>Daniel Standage</li>
+<li>Charlotte Wickham</li>
 </ul>
 <h3>Bibliography</h3>
 <dl class="bib-list">
@@ -385,11 +434,26 @@ Where do people disagree on who they&rsquo;re trying to help and how?</p>
 <em>Working in Public: The Making and Maintenance of Open Source Software</em>.
 Stripe Press, 2020.
 ISBN 978-0578675862.</dd>
+<dt class="bib-def" id="Irving2021">Irving2021</dt>
+<dd>Damien Irving, Kate Hertweck, Luke Johnston, Joel Ostblom, Charlotte Wickham, and Greg Wilson.
+<em>Research Software Engineering with Python: Building Software that Makes Research Possible</em>.
+CRC Press/Taylor and Francis, 2021.
+ISBN 978-0367698348.</dd>
 <dt class="bib-def" id="Kuchner2011">Kuchner2011</dt>
 <dd>Marc&nbsp;J. Kuchner.
 <em>Marketing for Scientists: How to Shine in Tough Times</em>.
 Island Press, 2011.
 ISBN 978-1597269940.</dd>
+<dt class="bib-def" id="Wilson2014">Wilson2014</dt>
+<dd>Greg Wilson, D.&nbsp;A. Aruliah, C.&nbsp;Titus Brown, Neil P.&nbsp;Chue Hong, Matt Davis, Richard&nbsp;T. Guy, Steven H.&nbsp;D. Haddock, Kathryn&nbsp;D. Huff, Ian&nbsp;M. Mitchell, Mark&nbsp;D. Plumbley, Ben Waugh, Ethan&nbsp;P. White, and Paul Wilson.
+Best practices for scientific computing.
+<em><span class="bibtex-protected">PLOS Biology</span></em>, January 2014.
+URL: <a href="https://doi.org/10.1371/journal.pbio.1001745">https://doi.org/10.1371/journal.pbio.1001745</a>, <a href="https://doi.org/10.1371/journal.pbio.1001745">doi:10.1371/journal.pbio.1001745</a>.</dd>
+<dt class="bib-def" id="Wilson2017">Wilson2017</dt>
+<dd>Greg Wilson, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy&nbsp;K. Teal.
+Good enough practices in scientific computing.
+<em><span class="bibtex-protected">PLOS</span> Computational Biology</em>, 13(6):1&ndash;20, 06 2017.
+URL: <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>, <a href="https://doi.org/10.1371/journal.pcbi.1005510">doi:10.1371/journal.pcbi.1005510</a>.</dd>
 </dl>
 <h3>Links</h3>
 <ul>

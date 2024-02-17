@@ -1,24 +1,30 @@
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="On Beyond Engineering" %]
 
--   Your responsibility as a manager is no longer to do things
--   It's to make sure everyone else can do things
--   The transition is often gradual in academia, open source, and startups
+-   Research software is software created and run to answer specific questions
+-   Usual starting point:
+    -   The software is just a piece of laboratory equipment
+    -   Papers, theses, and other reports are the product
+-   But if the software becomes more popular,
+    focus becomes building and sharing software that others can use
+-   Your responsibility as a manager is no longer to do things:
+    it's to make sure everyone else can do things
+    -   The transition is often gradual
 -   This tutorial will help
--   But only if you do the exercises
+    -   But only if you do the exercises
 
 <!-- ---------------------------------------------------------------- -->
 [% section_start class="aside" title="What This Is" %]
 
 -   Notes and working examples that instructors can use to perform a lesson
     -   Do *not* expect novices with no prior Python or Unix experience to be able to learn from them
--   Musical analogy
-    -   This is the chord changes and melody
-    -   We expect instructors to create an arrangement and/or improvise while delivering
-    -   See [*Teaching Tech Together*][t3] for background
+    -   Musical analogy
+        -   This is the chord changes and melody
+        -   We expect instructors to create an arrangement and/or improvise while delivering
 -   Please see [the license](./license/) for terms of use,
     the [Code of Conduct](./conduct/) for community standards,
     and [these guidelines](./contributing/) for notes on contributing
+-   Will cover some technical material, but focus is on teamwork not programming
 -   About the author:
     [Greg Wilson][wilson-greg] is a programmer, author, and educator
     -   Co-founder and first Executive Director of [Software Carpentry][carpentries]
@@ -30,20 +36,40 @@
 -   [Intended audience][persona]
     -   Ning did a bachelor's degree in economics
         and now works as a data analyst for the Ministry of Health
-    -   They learned Python in an intensive 16-week data science bootcamp program
+    -   They learned Python in an intensive 16-week data science bootcamp
         and are comfortable working with Unix command-line tools
-        and writing data analysis programs with Python
-    -   Ning has been put in charge of a new team
-        responsible for building analytics dashboards
-        that people in the Ministry can use to query data in real time
+        and writing multi-page data analyses
+    -   Ning is now in charge of a team
+        responsible for building real-time analytics dashboards
+        for non-programming staff in the Ministry
     -   They have no prior experience managing a team,
-        but have some horror stories from grad school and internships about being badly managed
+        but had some bad experiences being mismanaged in grad school and internships
 -   Prerequisites
-    -   intermediate Unix command line: `find`, `grep`, shell scripts using `for`
-    -   data analysis with Python: Pandas, Plotly, Jupyter notebooks, argparse, regular expressions
-    -   using Git and GitHub on months-long projects with two or three colleagues
+    -   Intermediate Unix command line: `find`, `grep`, shell scripts using `for`
+    -   Data analysis with Python: Pandas, Plotly, Jupyter notebooks, argparse, regular expressions
+    -   Using Git and GitHub on months-long projects with two or three colleagues
 -   Learning outcomes
     1.  TODO
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Starting Point" %]
+
+-   Most analyses done in [Jupyter notebooks][jupyter]
+    -   Everyone has a [%g sandbox "sandbox" %] Git repository
+    -   Analyses and reports (sort of) organized by client and date
+-   Some utility code in a shared Git repo
+    -   Everyone clones it to their desktop and installs in editable mode
+-   Google Docs for reports to [%g stakeholder "stakeholders" %]
+    -   Copy/paste figures from notebooks into docs
+    -   (Much) easier than the alternatives when collaborating with non-programmers
+-   Datasets stored in Google Drive
+    -   Everyone downloads what they to the `./data` directory in their sandbox repos
+    -   Rely on `.gitignore` to keep this out of version control
+-   Ning has to figure out:
+    -   What "better" looks like technically [%b Wilson2014 Wilson2017 Irving2021 %]
+    -   What it looks like *organizationally*
+    -   How to get the team to buy into changes (vs. doing it because they're told to)
+    -   How to get the organization to support those changes with more than just words
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Roles" %]
@@ -137,14 +163,12 @@
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="In Academia" %]
 
--   In academia:
+-   In academia [%b Kuchner2011 %]:
     -   Marketing is publishing papers and giving talks
     -   Sales is getting research grants
-    -   See [%b Kuchner2011 %]
--   In open source:
-    -   Marketing is blogging, podcasting, and giving talks
+-   In open source [%b Eghbal2020 %]:
+    -   Marketing is blogging, podcasting, and talking at meetups
     -   Sales is an unsolved problem
-    -   See [%b Eghbal2020 %]
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="exercise" %]
@@ -230,23 +254,24 @@ Be sure to include your own interruptions in your grid.
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Direction" %]
 
--   Write an [%g elevator_pitch "elevator pitch" %]
+-   Write an [%g elevator_pitch "elevator pitch" %] to help yourself figure out:
     -   Who you're trying to help
     -   What problem they have
     -   What you're doing
     -   Why it's better
--   Example:
-    -   Sooner or later, every social scientist has to analyze census data.
-    -   A lot of them use CenPlot,
-        but its GUI looks old-fashioned
-        and its scripting interface uses a poorly-documented dialect of Visual Basic.
-    -   We're building a new census analysis toolkit called ReCent
-        using [Python][python], [Polars][polars], [Plotly][plotly], and [DVC][dvc].
-    -   ReCent will be noticeably faster than CenPlot,
-        particularly on large datasets,
-        and will have a modern web-first interface.
-        It will also offer a comprehensive Python API
-        so that people can integrate it into data analysis pipelines.
+
+> -   Sooner or later, every social scientist has to analyze census data.
+> -   A lot of them use CenPlot,
+>     but its GUI looks old-fashioned
+>     and its scripting interface uses a poorly-documented dialect of Visual Basic.
+> -   We're building a new census analysis toolkit called ReCent
+>     using [Python][python], [Polars][polars], [Plotly][plotly], and [DVC][dvc].
+> -   ReCent will be noticeably faster than CenPlot,
+>     particularly on large datasets,
+>     and will have a modern web-first interface.
+>     It will also offer a comprehensive Python API
+>     so that people can integrate it into data analysis pipelines.
+
 -   *Don't* make the same unverifiable claims that you mock in others' pitches
     -   E.g., "a flexible, intuitive interface":
         have you ever seen anyone describe their system as inflexible and confusing?
