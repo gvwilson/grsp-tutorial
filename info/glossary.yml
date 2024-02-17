@@ -45,6 +45,19 @@
 
 # S
 
+- key: sandbox
+  en:
+    term: "sandbox"
+    def: >
+      A computing environment where programmers can try things out
+      without damaging real systems or exposing data to the outside world
+
+- key: stakeholder
+  en:
+    term: "stakeholder"
+    def: >
+      Someone with an interest in a project.
+
 # T
 
 # U

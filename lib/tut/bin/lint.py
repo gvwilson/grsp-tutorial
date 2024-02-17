@@ -2,6 +2,7 @@
 
 import argparse
 from pathlib import Path
+from pybtex.database import parse_file
 import re
 import shortcodes
 import yaml
@@ -9,6 +10,12 @@ import yaml
 
 CROSSREF = re.compile(r"\]\(\#(.+?)\)", re.DOTALL)
 MAKE_INC = re.compile(r"\$\{(OUT|SRC)\}/(\w+?\.(sql|out|py))\b")
+
+
+@shortcodes.register("b")
+def single(pargs, kwargs, context):
+    context["bibliography"] |= set(pargs)
+
 
 @shortcodes.register("double")
 def double(pargs, kwargs, context):
@@ -33,14 +40,24 @@ def main():
     options = parse_args()
     parser = shortcodes.Parser(ignore_unknown=True)
     context = {
+        "bibliography": set(),
         "glossref": set(),
         "inclusion": set(),
         "out": options.output,
         "src": options.source,
     }
     parser.parse(Path(options.page).read_text(), context)
+    do_bibliography(options, context["bibliography"])
     do_inclusions(options, context["inclusion"])
     do_glossary(options, context["glossref"])
+
+
+def do_bibliography(options, used):
+    """Check bibliography keys."""
+    bib = parse_file(options.bibliography)
+    known = set(bib.entries.keys())
+    report("unknown bibliography keys", used - known)
+    report("unused bibliography keys", known - used)
 
 
 def do_glossary(options, used):
@@ -96,6 +113,9 @@ def find_page_inc(filename):
 def parse_args():
     """Parse command-line arguments."""
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--bibliography", type=str, required=True, help="path to bibliography file"
+    )
     parser.add_argument("--glossary", type=str, required=True, help="path to glossary")
     parser.add_argument("--makefile", type=str, required=True, help="path to Makefile")
     parser.add_argument(

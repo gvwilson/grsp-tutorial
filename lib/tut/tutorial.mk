@@ -26,6 +26,7 @@ serve:
 .PHONY: lint
 lint:
 	@python ${TEMPLATE}/bin/lint.py \
+	--bibliography info/bibliography.bib \
 	--glossary info/glossary.yml \
 	--lang $$(python config.py lang) \
 	--makefile Makefile \
