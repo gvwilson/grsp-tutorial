@@ -10,6 +10,13 @@
 
 # E
 
+- key: elevator_pitch
+  en:
+    term: "elevator pitch"
+    def: >
+      A short description of a project or product
+      that can be delivered and understood in just a few seconds.
+
 # F
 
 # G

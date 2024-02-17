@@ -65,7 +65,7 @@
 [% section_break class="exercise" %]
 
 [% exercise %]
-Read "[Dealing with Disruptive Behaviors][noaa_disruptive]"
+Read "[Dealing with Disruptive Behaviors](@root/files/noaa-facilitating-disruptive.pdf)"
 and decide which of the ten stereotypes you fit.
 
 <table>
@@ -100,9 +100,51 @@ What you will probably see is:
 Be sure to include your own interruptions in your grid.
 
 <!-- ---------------------------------------------------------------- -->
-[% section_break class="topic" title="Managing 'That Guy'" %]
+[% section_break class="topic" title="Direction" %]
 
--   TODO
+-   Write an [%g elevator_pitch "elevator pitch" %]
+    -   Who you're trying to help
+    -   What problem they have
+    -   What you're doing
+    -   Why it's better
+-   Example:
+    -   Sooner or later, every social scientist has to analyze census data.
+    -   A lot of them use CenPlot,
+        but its GUI looks old-fashioned
+        and its scripting interface uses a poorly-documented dialect of Visual Basic.
+    -   We're building a new census analysis toolkit called ReCent
+        using [Python][python], [Polars][polars], [Plotly][plotly], and [DVC][dvc].
+    -   ReCent will be noticeably faster than CenPlot,
+        particularly on large datasets,
+        and will have a modern web-first interface.
+        It will also offer a comprehensive Python API
+        so that people can integrate it into data analysis pipelines.
+-   *Don't* make the same unverifiable claims that you mock in others' pitches
+    -   E.g., "a flexible, intuitive interface":
+        have you ever seen anyone describe their system as inflexible and confusing?
+-   Internal: ensure everyone on the team understands what the goal is
+    -   Enables team members to make small decisions independently and consistently
+-   External: allows busy people to decide if they care or not
+    -   Most people won't
+    -   But they'll thank you for helping them figure that out quickly
+-   Review and update your pitch at least once a year
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="exercise" %]
+
+[% exercise %]
+Write an elevator pitch for a tool you use regularly,
+then compare your pitch with what you see on the tool's home page
+*without scrolling down*.
+How well is the tool explaining its purpose and benefits?
+
+[% exercise %]
+Have each member of your team write an elevator pitch for your project
+simultaneously and independently,
+then compare those pitches.
+Where is there agreement?
+Where are there gaps?
+Where do people disagree on who they're trying to help and how?
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]
@@ -112,6 +154,8 @@ Be sure to include your own interruptions in your grid.
 [% glossary %]
 
 ### Acknowledgments
+
+This tutorial would not exist without the help of:
 
 [% thanks %]
 
