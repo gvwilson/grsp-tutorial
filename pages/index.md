@@ -1,22 +1,33 @@
 <!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="On Beyond Engineering" %]
+
+-   Your responsibility as a manager is no longer to do things
+-   It's to make sure everyone else can do things
+-   The transition is often gradual in academia, open source, and startups
+-   This tutorial will help
+-   But only if you do the exercises
+
+<!-- ---------------------------------------------------------------- -->
 [% section_start class="aside" title="What This Is" %]
 
--   notes and working examples that instructors can use to perform a lesson
-    -   do *not* expect novices with no prior Python or Unix experience to be able to learn from them
--   musical analogy
-    -   this is the chord changes and melody
-    -   we expect instructors to create an arrangement and/or improvise while delivering
-    -   see [*Teaching Tech Together*][t3] for background
--   please see [the license](./license/) for terms of use,
+-   Notes and working examples that instructors can use to perform a lesson
+    -   Do *not* expect novices with no prior Python or Unix experience to be able to learn from them
+-   Musical analogy
+    -   This is the chord changes and melody
+    -   We expect instructors to create an arrangement and/or improvise while delivering
+    -   See [*Teaching Tech Together*][t3] for background
+-   Please see [the license](./license/) for terms of use,
     the [Code of Conduct](./conduct/) for community standards,
     and [these guidelines](./contributing/) for notes on contributing
--   about the author:
-    [Greg Wilson][wilson-greg] is a programmer, author, and educator based in Toronto
+-   About the author:
+    [Greg Wilson][wilson-greg] is a programmer, author, and educator
+    -   Co-founder and first Executive Director of [Software Carpentry][carpentries]
+    -   Currently a senior software engineering manager at a startup in Toronto
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Scope" %]
 
--   [intended audience][persona]
+-   [Intended audience][persona]
     -   Ning did a bachelor's degree in economics
         and now works as a data analyst for the Ministry of Health
     -   They learned Python in an intensive 16-week data science bootcamp program
@@ -24,14 +35,131 @@
         and writing data analysis programs with Python
     -   Ning has been put in charge of a new team
         responsible for building analytics dashboards
-	that people in the Ministry can use to query data in real time
-    -   They have no prior experience managing a team or a long-lived project
--   prerequisites
+        that people in the Ministry can use to query data in real time
+    -   They have no prior experience managing a team,
+        but have some horror stories from grad school and internships about being badly managed
+-   Prerequisites
     -   intermediate Unix command line: `find`, `grep`, shell scripts using `for`
     -   data analysis with Python: Pandas, Plotly, Jupyter notebooks, argparse, regular expressions
     -   using Git and GitHub on months-long projects with two or three colleagues
--   learning outcomes
+-   Learning outcomes
     1.  TODO
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Roles" %]
+
+-   Newcomer's view
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Also Called</th>
+      <th>What It Does</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>Marketing</td>
+    <td>Awareness</td>
+    <td>Make people aware of who you're trying to help and how</td>
+  </tr>
+  <tr>
+    <td>Sales</td>
+    <td>Adoption</td>
+    <td>Get people from "this looks interesting" to "we'll pay for it"</td>
+  </tr>
+  <tr>
+    <td>Support</td>
+    <td>Success</td>
+    <td>Remove roadblocks and providing help</td>
+  </tr>
+  <tr>
+    <td>Human Resources</td>
+    <td>Community</td>
+    <td>Hiring, firing, promotions, and benefits</td>
+  </tr>
+  <tr>
+    <td>Product Management</td>
+    <td></td>
+    <td>Translate user pain into requirements</td>
+  </tr>
+  <tr>
+    <td>Project Management</td>
+    <td></td>
+    <td>Who should work on what right now and how late are we</td>
+  </tr>
+  <tr>
+    <td>Engineering</td>
+    <td></td>
+    <td>Write, test, debug, and deploy software (hopefully in that order)</td>
+  </tr>
+</table>
+
+-   A better way to look at it
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>What Risk It Addresses</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>Marketing</td>
+    <td>People don't know we exist or how we can help</td>
+  </tr>
+  <tr>
+    <td>Sales</td>
+    <td>People won't pay to support our work</td>
+  </tr>
+  <tr>
+    <td>Support</td>
+    <td>People struggle to use what we make</td>
+  </tr>
+  <tr>
+    <td>Human Resources</td>
+    <td>We don't have the right people and the ones we have aren't happy</td>
+  </tr>
+  <tr>
+    <td>Product Management</td>
+    <td>We're building the wrong thing</td>
+  </tr>
+  <tr>
+    <td>Project Management</td>
+    <td>People aren't working on the right things or aren't working well together</td>
+  </tr>
+  <tr>
+    <td>Engineering</td>
+    <td>We aren't making what we promised we'd make, it doesn't work, or it's not available</td>
+  </tr>
+</table>
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="aside" title="In Academia" %]
+
+-   In academia:
+    -   Marketing is publishing papers and giving talks
+    -   Sales is getting research grants
+    -   See [%b Kuchner2011 %]
+-   In open source:
+    -   Marketing is blogging, podcasting, and giving talks
+    -   Sales is an unsolved problem
+    -   See [%b Eghbal2020 %]
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="exercise" %]
+
+[% exercise %]
+Have each person on your team make a list of things they do for your project
+every working day,
+once a week,
+and once each month, quarter, or year.
+Label these activities by role.
+
+1.  Who spends most of their time on one kind of thing
+    and who is juggling several responsibilities?
+
+2.  Which roles aren't filled by anyone on your team?
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Meetings" %]
@@ -51,7 +179,7 @@
     -   "Are we chatting in Zoom, on Slack, or in the Google Doc?"
     -   "How do I raise my hand?"
 -   Take notes
-    -   So people who weren’t there know what happened
+    -   So people who weren't there know what happened
     -   So people who were there agree what happened
     -   So people can be held accountable at later meetings
     -   "Notes" may take the form of updated tickets
@@ -158,6 +286,10 @@ Where do people disagree on who they're trying to help and how?
 This tutorial would not exist without the help of:
 
 [% thanks %]
+
+### Bibliography
+
+[% bibliography %]
 
 ### Links
 

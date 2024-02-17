@@ -36,31 +36,46 @@
 
 
       <!-- ---------------------------------------------------------------- -->
+</section>
+<section class="topic">
+<h2 class="topic">1: On Beyond Engineering</h2>
+<ul>
+<li>Your responsibility as a manager is no longer to do things</li>
+<li>It&rsquo;s to make sure everyone else can do things</li>
+<li>The transition is often gradual in academia, open source, and startups</li>
+<li>This tutorial will help</li>
+<li>But only if you do the exercises</li>
+</ul>
+<!-- ---------------------------------------------------------------- -->
 <section class="aside">
 <h2 class="aside">What This Is</h2>
 <ul>
-<li>notes and working examples that instructors can use to perform a lesson<ul>
-<li>do <em>not</em> expect novices with no prior Python or Unix experience to be able to learn from them</li>
+<li>Notes and working examples that instructors can use to perform a lesson<ul>
+<li>Do <em>not</em> expect novices with no prior Python or Unix experience to be able to learn from them</li>
 </ul>
 </li>
-<li>musical analogy<ul>
-<li>this is the chord changes and melody</li>
-<li>we expect instructors to create an arrangement and/or improvise while delivering</li>
-<li>see <a href="https://teachtogether.tech/"><em>Teaching Tech Together</em></a> for background</li>
+<li>Musical analogy<ul>
+<li>This is the chord changes and melody</li>
+<li>We expect instructors to create an arrangement and/or improvise while delivering</li>
+<li>See <a href="https://teachtogether.tech/"><em>Teaching Tech Together</em></a> for background</li>
 </ul>
 </li>
-<li>please see <a href="./license/">the license</a> for terms of use,
+<li>Please see <a href="./license/">the license</a> for terms of use,
     the <a href="./conduct/">Code of Conduct</a> for community standards,
     and <a href="./contributing/">these guidelines</a> for notes on contributing</li>
-<li>about the author:
-    <a href="https://third-bit.com/">Greg Wilson</a> is a programmer, author, and educator based in Toronto</li>
+<li>About the author:
+    <a href="https://third-bit.com/">Greg Wilson</a> is a programmer, author, and educator<ul>
+<li>Co-founder and first Executive Director of <a href="https://carpentries.org/">Software Carpentry</a></li>
+<li>Currently a senior software engineering manager at a startup in Toronto</li>
+</ul>
+</li>
 </ul>
 <!-- ---------------------------------------------------------------- -->
 </section>
 <section class="aside">
 <h2 class="aside">Scope</h2>
 <ul>
-<li><a href="http://teachtogether.tech/en/index.html#s:process-personas">intended audience</a><ul>
+<li><a href="http://teachtogether.tech/en/index.html#s:process-personas">Intended audience</a><ul>
 <li>Ning did a bachelor&rsquo;s degree in economics
     and now works as a data analyst for the Ministry of Health</li>
 <li>They learned Python in an intensive 16-week data science bootcamp program
@@ -68,17 +83,18 @@
     and writing data analysis programs with Python</li>
 <li>Ning has been put in charge of a new team
     responsible for building analytics dashboards
-that people in the Ministry can use to query data in real time</li>
-<li>They have no prior experience managing a team or a long-lived project</li>
+    that people in the Ministry can use to query data in real time</li>
+<li>They have no prior experience managing a team,
+    but have some horror stories from grad school and internships about being badly managed</li>
 </ul>
 </li>
-<li>prerequisites<ul>
+<li>Prerequisites<ul>
 <li>intermediate Unix command line: <code>find</code>, <code>grep</code>, shell scripts using <code>for</code></li>
 <li>data analysis with Python: Pandas, Plotly, Jupyter notebooks, argparse, regular expressions</li>
 <li>using Git and GitHub on months-long projects with two or three colleagues</li>
 </ul>
 </li>
-<li>learning outcomes<ol>
+<li>Learning outcomes<ol>
 <li>TODO</li>
 </ol>
 </li>
@@ -86,7 +102,134 @@ that people in the Ministry can use to query data in real time</li>
 <!-- ---------------------------------------------------------------- -->
 </section>
 <section class="topic">
-<h2 class="topic">1: Meetings</h2>
+<h2 class="topic">2: Roles</h2>
+<ul>
+<li>Newcomer&rsquo;s view</li>
+</ul>
+<table>
+<thead>
+    <tr>
+      <th>Role</th>
+      <th>Also Called</th>
+      <th>What It Does</th>
+    </tr>
+  </thead>
+<tr>
+    <td>Marketing</td>
+    <td>Awareness</td>
+    <td>Make people aware of who you're trying to help and how</td>
+  </tr>
+<tr>
+    <td>Sales</td>
+    <td>Adoption</td>
+    <td>Get people from "this looks interesting" to "we'll pay for it"</td>
+  </tr>
+<tr>
+    <td>Support</td>
+    <td>Success</td>
+    <td>Remove roadblocks and providing help</td>
+  </tr>
+<tr>
+    <td>Human Resources</td>
+    <td>Community</td>
+    <td>Hiring, firing, promotions, and benefits</td>
+  </tr>
+<tr>
+    <td>Product Management</td>
+    <td></td>
+    <td>Translate user pain into requirements</td>
+  </tr>
+<tr>
+    <td>Project Management</td>
+    <td></td>
+    <td>Who should work on what right now and how late are we</td>
+  </tr>
+<tr>
+    <td>Engineering</td>
+    <td></td>
+    <td>Write, test, debug, and deploy software (hopefully in that order)</td>
+  </tr>
+</table>
+<ul>
+<li>A better way to look at it</li>
+</ul>
+<table>
+<thead>
+    <tr>
+      <th>Role</th>
+      <th>What Risk It Addresses</th>
+    </tr>
+  </thead>
+<tr>
+    <td>Marketing</td>
+    <td>People don't know we exist or how we can help</td>
+  </tr>
+<tr>
+    <td>Sales</td>
+    <td>People won't pay to support our work</td>
+  </tr>
+<tr>
+    <td>Support</td>
+    <td>People struggle to use what we make</td>
+  </tr>
+<tr>
+    <td>Human Resources</td>
+    <td>We don't have the right people and the ones we have aren't happy</td>
+  </tr>
+<tr>
+    <td>Product Management</td>
+    <td>We're building the wrong thing</td>
+  </tr>
+<tr>
+    <td>Project Management</td>
+    <td>People aren't working on the right things or aren't working well together</td>
+  </tr>
+<tr>
+    <td>Engineering</td>
+    <td>We aren't making what we promised we'd make, it doesn't work, or it's not available</td>
+  </tr>
+</table>
+<!-- ---------------------------------------------------------------- -->
+</section>
+<section class="aside">
+<h2 class="aside">In Academia</h2>
+<ul>
+<li>In academia:<ul>
+<li>Marketing is publishing papers and giving talks</li>
+<li>Sales is getting research grants</li>
+<li>See <span class="bib-ref">[<a class="bib-ref" href="bib/#Kuchner2011">Kuchner2011</a>]</span></li>
+</ul>
+</li>
+<li>In open source:<ul>
+<li>Marketing is blogging, podcasting, and giving talks</li>
+<li>Sales is an unsolved problem</li>
+<li>See <span class="bib-ref">[<a class="bib-ref" href="bib/#Eghbal2020">Eghbal2020</a>]</span></li>
+</ul>
+</li>
+</ul>
+<!-- ---------------------------------------------------------------- -->
+</section>
+<section class="exercise">
+<h2 class="exercise">Practice</h2>
+<p><strong>Exercise 1</strong>:
+Have each person on your team make a list of things they do for your project
+every working day,
+once a week,
+and once each month, quarter, or year.
+Label these activities by role.</p>
+<ol>
+<li>
+<p>Who spends most of their time on one kind of thing
+    and who is juggling several responsibilities?</p>
+</li>
+<li>
+<p>Which roles aren&rsquo;t filled by anyone on your team?</p>
+</li>
+</ol>
+<!-- ---------------------------------------------------------------- -->
+</section>
+<section class="topic">
+<h2 class="topic">3: Meetings</h2>
 <ul>
 <li>People don&rsquo;t hate meetings: they hate badly-run meetings<ul>
 <li>Which are the only kind most people have seen</li>
@@ -111,7 +254,7 @@ that people in the Ministry can use to query data in real time</li>
 </ul>
 </li>
 <li>Take notes<ul>
-<li>So people who weren’t there know what happened</li>
+<li>So people who weren&rsquo;t there know what happened</li>
 <li>So people who were there agree what happened</li>
 <li>So people can be held accountable at later meetings</li>
 <li>&ldquo;Notes&rdquo; may take the form of updated tickets</li>
@@ -129,7 +272,7 @@ that people in the Ministry can use to query data in real time</li>
 </section>
 <section class="exercise">
 <h2 class="exercise">Practice</h2>
-<p><strong>Exercise 1</strong>:
+<p><strong>Exercise 2</strong>:
 Read &ldquo;<a href="files/noaa-facilitating-disruptive.pdf">Dealing with Disruptive Behaviors</a>&rdquo;
 and decide which of the ten stereotypes you fit.</p>
 <table>
@@ -148,7 +291,7 @@ and decide which of the ten stereotypes you fit.</p>
     <td>Shy Clam</td>
   </tr>
 </table>
-<p><strong>Exercise 2</strong>:
+<p><strong>Exercise 3</strong>:
 The next time you are in a meeting,
 draw a grid and label the rows and columns with the participants&rsquo; names.
 Each time person X interrupts person Y,
@@ -167,7 +310,7 @@ What you will probably see is:</p>
 <!-- ---------------------------------------------------------------- -->
 </section>
 <section class="topic">
-<h2 class="topic">2: Direction</h2>
+<h2 class="topic">4: Direction</h2>
 <ul>
 <li>Write an <a href="#g:elevator_pitch">elevator pitch</a><ul>
 <li>Who you&rsquo;re trying to help</li>
@@ -210,12 +353,12 @@ What you will probably see is:</p>
 </section>
 <section class="exercise">
 <h2 class="exercise">Practice</h2>
-<p><strong>Exercise 3</strong>:
+<p><strong>Exercise 4</strong>:
 Write an elevator pitch for a tool you use regularly,
 then compare your pitch with what you see on the tool&rsquo;s home page
 <em>without scrolling down</em>.
 How well is the tool explaining its purpose and benefits?</p>
-<p><strong>Exercise 4</strong>:
+<p><strong>Exercise 5</strong>:
 Have each member of your team write an elevator pitch for your project
 simultaneously and independently,
 then compare those pitches.
@@ -235,6 +378,19 @@ Where do people disagree on who they&rsquo;re trying to help and how?</p>
 <ul><li>Kate Hertweck</li>
 <li>Daniel Standage</li>
 </ul>
+<h3>Bibliography</h3>
+<dl class="bib-list">
+<dt class="bib-def" id="Eghbal2020">Eghbal2020</dt>
+<dd>Nadia Eghbal.
+<em>Working in Public: The Making and Maintenance of Open Source Software</em>.
+Stripe Press, 2020.
+ISBN 978-0578675862.</dd>
+<dt class="bib-def" id="Kuchner2011">Kuchner2011</dt>
+<dd>Marc&nbsp;J. Kuchner.
+<em>Marketing for Scientists: How to Shine in Tough Times</em>.
+Island Press, 2011.
+ISBN 978-1597269940.</dd>
+</dl>
 <h3>Links</h3>
 <ul>
 <li><em>Teaching Tech Together</em>: <a href="https://teachtogether.tech/">https://teachtogether.tech/</a></li>
@@ -243,7 +399,9 @@ Where do people disagree on who they&rsquo;re trying to help and how?</p>
 <li>Plotly visualization toolkit: <a href="https://plotly.com/">https://plotly.com/</a></li>
 <li>Polars dataframe library: <a href="https://pola.rs/">https://pola.rs/</a></li>
 <li>Python programming language: <a href="https://www.python.org/">https://www.python.org/</a></li>
+<li>The Carpentries: <a href="https://carpentries.org/">https://carpentries.org/</a></li>
 </ul>
+</section>
 </section>
     </main>
     <footer>

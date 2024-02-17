@@ -16,6 +16,7 @@ out_dir = "docs"
 rouge_style = "github.css"
 lang = "en"
 extension = "/"
+bibstyle = "unsrt"
 
 # Enable various Markdown extensions.
 markdown_settings = {

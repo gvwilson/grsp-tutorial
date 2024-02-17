@@ -1,4 +1,7 @@
 # General
+- key: "carpentries"
+  url: "https://carpentries.org/"
+  title: "The Carpentries"
 - key: "dvc"
   url: "https://dvc.org/"
   title: "Data Version Control tool"
