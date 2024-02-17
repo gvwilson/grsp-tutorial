@@ -55,11 +55,49 @@
     -   So people who were there agree what happened
     -   So people can be held accountable at later meetings
     -   "Notes" may take the form of updated tickets
--   Status, then decisions
+-   Shallow, then deep
     -   First lap: three-sentence rule
     -   Sort issues by priority and discuss in order
     -   Progress, plans, and problems go in
     -   Context and priorities come out
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="exercise" %]
+
+[% exercise %]
+Read "[Dealing with Disruptive Behaviors][noaa_disruptive]"
+and decide which of the ten stereotypes you fit.
+
+<table>
+  <tr>
+    <td>Apathetic Flounder</td>
+    <td>Argumentative Jellyfish</td>
+    <td>Arrogant Sea Lion</td>
+    <td>Blowfish</td>
+    <td>Complaining Crab</td>
+  </tr>
+  <tr>
+    <td>Diverting Dolphin</td>
+    <td>Dominating Shark</td>
+    <td>Eager Sea Otter</td>
+    <td>Indecisive Octopus</td>
+    <td>Shy Clam</td>
+  </tr>
+</table>
+
+[% exercise %]
+The next time you are in a meeting,
+draw a grid and label the rows and columns with the participants' names.
+Each time person X interrupts person Y,
+add a tick at location XY.
+What you will probably see is:
+
+1.  The same few people do most of the interrupting.
+
+2.  They only interrupt people they perceive as having lower social status within the group
+    (i.e., they interrupt down but not up).
+
+Be sure to include your own interruptions in your grid.
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Managing 'That Guy'" %]
